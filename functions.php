@@ -7,7 +7,7 @@
 
 function get_db(): object {
 
-    return $db = new PDO('mysql:host=db; dbname=gabriel-collection', 'root', 'password');
+    return new PDO('mysql:host=db; dbname=gabriel-collection', 'root', 'password');
 
 }
 
