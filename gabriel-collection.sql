@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.37)
 # Database: gabriel-collection
-# Generation Time: 2022-02-07 11:53:45 +0000
+# Generation Time: 2022-02-07 12:09:09 +0000
 # ************************************************************
 
 
@@ -30,6 +30,7 @@ CREATE TABLE `cat_types` (
   `Breed Name` varchar(255) NOT NULL DEFAULT '',
   `Country of Origin` varchar(255) NOT NULL DEFAULT '',
   `Fluffiness Rating` enum('1','2','3','4','5') NOT NULL,
+  `Image` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
