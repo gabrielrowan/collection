@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.37)
 # Database: gabriel-collection
-# Generation Time: 2022-02-07 14:13:01 +0000
+# Generation Time: 2022-02-07 15:08:04 +0000
 # ************************************************************
 
 
@@ -27,17 +27,17 @@ DROP TABLE IF EXISTS `cat_types`;
 
 CREATE TABLE `cat_types` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `Breed Name` varchar(255) NOT NULL DEFAULT '',
-  `Country of Origin` varchar(255) NOT NULL DEFAULT '',
-  `Fluffiness Rating` enum('0','1','2','3','4','5') NOT NULL,
-  `Image` varchar(255) NOT NULL DEFAULT '',
+  `breed_name` varchar(255) NOT NULL DEFAULT '',
+  `country_of_origin` varchar(255) NOT NULL DEFAULT '',
+  `fluffiness_rating` enum('0','1','2','3','4','5') NOT NULL,
+  `image` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `cat_types` WRITE;
 /*!40000 ALTER TABLE `cat_types` DISABLE KEYS */;
 
-INSERT INTO `cat_types` (`id`, `Breed Name`, `Country of Origin`, `Fluffiness Rating`, `Image`)
+INSERT INTO `cat_types` (`id`, `breed_name`, `country_of_origin`, `fluffiness_rating`, `image`)
 VALUES
 	(1,'Sphynx','Canada','0','https://s30379.pcdn.co/wp-content/uploads/2019/09/p1dfjorjqds6c9o21dre1ngs1p3j6.jpg'),
 	(2,'Siberian Forest Cat','Russia','4','https://i.imgur.com/yW9lNhf.jpg?1'),
