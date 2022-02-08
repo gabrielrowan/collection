@@ -36,6 +36,9 @@ function retrieve_db_items(object $db): array {
 
 
 function printCatBreed(array $catBreeds): string {
+    if (!count($catBreeds)) {
+        return "No cat informative given!";
+    }
     $result = "";
     foreach ($catBreeds as $catBreed) {
         $result .= '<div class="breed">' .
@@ -45,13 +48,8 @@ function printCatBreed(array $catBreeds): string {
             '<div class = "photo">' . "Cat Photo: " . "<img src='" . $catBreed['image'] . "'/>" . '</div>' .
         '</div>';
     }
+
     return $result;
-}
-
-
-
-
-
-
+};
 
 
