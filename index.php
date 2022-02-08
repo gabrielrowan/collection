@@ -20,18 +20,15 @@ $catBreeds = retrieve_db_items($db);
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-
-<header>
-<h1>Cats of the World! 	&#127758</h1>
-</header>
-<main>
-    <?php
-
-    $result = printCatBreed($catBreeds);
-    echo $result;
-
-    ?>
-</main>
+    <header>
+        <h1>Cats of the World! 	&#127758</h1>
+    </header>
+    <main>
+        <?php
+        $result = printCatBreed($catBreeds);
+        echo $result;
+        ?>
+    </main>
 </body>
 </html>
 
