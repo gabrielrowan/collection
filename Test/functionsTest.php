@@ -21,16 +21,16 @@ class functionsTest extends TestCase
 
         $expected =
             '<div class="breed">' .
-            '<div class = "name">' . "Breed Name: " . "new cat breed" . '</div>' .
+            '<div class = "name">' . "new cat breed" . '</div>' .
             '<div class = "countryOfOrigin">' . "Country of Origin: " . "Alaska" . '</div>' .
             '<div class = "fluffiness">' . "Fluffiness Rating: " . "5" . '</div>' .
-            '<div class = "photo">' . "Cat Photo: " . "<img src='" . "url.png" . "'/>" . '</div>' .
+            '<div class = "photo">' .  "<img src='" . "url.png" . "'/>" . '</div>' .
             '</div>' .
             '<div class="breed">' .
-            '<div class = "name">' . "Breed Name: " . "special cat breed" . '</div>' .
+            '<div class = "name">' . "special cat breed" . '</div>' .
             '<div class = "countryOfOrigin">' . "Country of Origin: " . "France" . '</div>' .
             '<div class = "fluffiness">' . "Fluffiness Rating: " . "3" . '</div>' .
-            '<div class = "photo">' . "Cat Photo: " . "<img src='" . "newurl.png" . "'/>" . '</div>' .
+            '<div class = "photo">' . "<img src='" . "newurl.png" . "'/>" . '</div>' .
             '</div>';
 
         $case = printCatBreed($array);
