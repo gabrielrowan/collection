@@ -2,15 +2,42 @@ body {
 
     background-color: #FDB9C8;
 
-
 }
 
 header {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
     font-family: 'Bungee Shade', cursive;
+    flex-wrap: wrap;
+    text-align: center;
 
+}
+
+h1 {
+    background-color: #FEE6ED;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.breed {
+    padding: 2rem;
+    text-align: center;
+    background-color: #FEE6ED;
+    margin: 0.5rem;
+
+}
+
+.countryOfOrigin, .fluffiness, .photo {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.name {
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem;
 }
 
 img {
@@ -18,14 +45,16 @@ img {
     width: 25rem;
 }
 
-.breed {
-    padding: 2rem;
+main {
+    display: flex;
+    padding: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.name, .countryOfOrigin, .fluffiness, .photo {
-    font-family: 'Work Sans', sans-serif;
-    padding: 0.5rem;
-    font-size: 1.5rem;
+@media only screen and (max-width: 745px) {
+    header {
+        text-align: left;
+    }
 }
-
 

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.37)
 # Database: gabriel-collection
-# Generation Time: 2022-02-08 12:09:53 +0000
+# Generation Time: 2022-02-08 14:15:52 +0000
 # ************************************************************
 
 
@@ -40,10 +40,10 @@ LOCK TABLES `cat_types` WRITE;
 INSERT INTO `cat_types` (`id`, `breed_name`, `country_of_origin`, `fluffiness_rating`, `image`)
 VALUES
 	(1,'Sphynx','Canada','0','https://ae01.alicdn.com/kf/Hda3b838392e74c31bf117ba8c768b6b1g/Cat-Clothes-Winter-Warm-Handmade-Soft-Cats-Knitted-Sweater-Jumper-Sphynx-Cat-Hoodies-Pullover-Sphinx-Kitten.jpg_Q90.jpg_.webp'),
-	(2,'Siberian Forest Cat','Russia','4','https://i.imgur.com/yW9lNhf.jpg?1'),
-	(3,'Ragdoll','US','4','https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2020/12/shutterstock_268007813-1.jpg'),
-	(4,'Persian','Iran','5','https://s36537.pcdn.co/wp-content/uploads/2018/11/persian-cat-face.jpg.webp'),
-	(5,'Bengal','US','1','https://www.animalshq.com/wp-content/uploads/2021/05/Why-are-Bengal-cats-so-expensive-15-5-1.jpg');
+	(2,'Siberian Forest Cat','Russia','4','https://st2.depositphotos.com/3047333/8428/i/600/depositphotos_84280024-stock-photo-siberian-cat-in-snowy-winter.jpg'),
+	(3,'Ragdoll','US','4','https://i.pinimg.com/550x/88/4f/db/884fdb3c9ad1930600ff471758d8561e.jpg'),
+	(4,'Persian','Iran','5','http://2.bp.blogspot.com/-8oxTha6FnjM/Uh9k7gSpoNI/AAAAAAAADCo/8qOjFwfKomo/s1600/054d7111.jpg'),
+	(5,'Bengal','US','1','https://static.boredpanda.com/blog/wp-content/uploads/2016/08/bengal-cat-spots-fur-thor-5.jpg');
 
 /*!40000 ALTER TABLE `cat_types` ENABLE KEYS */;
 UNLOCK TABLES;
