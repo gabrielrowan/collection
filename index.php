@@ -22,9 +22,12 @@ $result = printCatBreed($catBreeds);
     <header>
         <h1>Cats of the World! 	&#127758</h1>
     </header>
-    <main>
+    <section class="printCat">
         <?=$result?>
-    </main>
+    </section>
+    <section class="addCat">
+        <button type="button" class="formButton"><a href="form.php">Add new cat!</a></button>
+    </section>
 </body>
 </html>
 

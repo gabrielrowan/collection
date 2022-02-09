@@ -282,4 +282,7 @@
         </fieldset>
     </form>
 </main>
+<footer>
+    <button type="button" class="indexButton"><a href="index.php">Back to homepage</a></button>
+</footer>
 </body>
