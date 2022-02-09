@@ -13,7 +13,7 @@
     <h1>Cats of the World! 	&#127758</h1>
 </header>
 <main class="formMain">
-    <form>
+    <form action="index.php" method="post">
         <fieldset>
             <h2>Add a cat to our database!</h2>
             <label for="name">Breed name:</label><br>
