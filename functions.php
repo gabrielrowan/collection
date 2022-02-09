@@ -45,3 +45,22 @@ function printCatBreed(array $catBreeds): string {
     }
     return $result;
 };
+
+/**
+ * Checks to see if inputted data has been set in the submitted form
+ *
+ * @param array $insertedData
+ *
+ * @return bool which shows true or false depending on whether the inputted data has been set
+ */
+function checkKeys(array $insertedData): bool {
+    if (isset($insertedData['breed_name'])
+        && isset($insertedData['country_of_origin'])
+        && isset($insertedData['fluffiness_rating'])
+        && isset($insertedData['image'])) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
