@@ -20,18 +20,17 @@ class functionsTest extends TestCase
                     ];
 
         $expected =
-            '<div class="breed">' .
-            '<div class = "name">' . "new cat breed" . '</div>' .
-            '<div class = "countryOfOrigin">' . "Country of Origin: " . "Alaska" . '</div>' .
-            '<div class = "fluffiness">' . "Fluffiness Rating: " . "5" . '</div>' .
-            '<div class = "photo">' .  "<img src='" . "url.png" . "'/>" . '</div>' .
-            '</div>' .
-            '<div class="breed">' .
-            '<div class = "name">' . "special cat breed" . '</div>' .
-            '<div class = "countryOfOrigin">' . "Country of Origin: " . "France" . '</div>' .
-            '<div class = "fluffiness">' . "Fluffiness Rating: " . "3" . '</div>' .
-            '<div class = "photo">' . "<img src='" . "newurl.png" . "'/>" . '</div>' .
-            '</div>';
+            "<div class='breed'> 
+            <div class = 'name'>new cat breed</div> 
+            <div class = 'countryOfOrigin'>Country of Origin: Alaska</div>
+            <div class = 'fluffiness'>Fluffiness Rating: 5</div>
+            <div class = 'photo'><img alt='Cat Photo' src='url.png'/></div>
+        </div><div class='breed'> 
+            <div class = 'name'>special cat breed</div> 
+            <div class = 'countryOfOrigin'>Country of Origin: France</div>
+            <div class = 'fluffiness'>Fluffiness Rating: 3</div>
+            <div class = 'photo'><img alt='Cat Photo' src='newurl.png'/></div>
+        </div>";
 
         $case = printCatBreed($array);
 
@@ -52,7 +51,7 @@ class functionsTest extends TestCase
 
     {
         $emptyArray = [];
-        $expected = "No cat informative given!";
+        $expected = "No cat information given!";
 
         $case = printCatBreed($emptyArray);
 

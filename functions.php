@@ -41,10 +41,10 @@ function printCatBreed(array $catBreeds): string {
     $result = "";
     foreach ($catBreeds as $catBreed) {
         $result .= "<div class='breed'> 
-            <div class = 'name'> $catBreed[breed_name] </div> 
-            <div class = 'countryOfOrigin'>Country of Origin: $catBreed[country_of_origin] </div>
-            <div class = 'fluffiness'>Fluffiness Rating: $catBreed[fluffiness_rating] </div>
-            <div class = 'photo'> <img alt='Cat Photo' src='$catBreed[image]'/> </div>
+            <div class = 'name'>$catBreed[breed_name]</div> 
+            <div class = 'countryOfOrigin'>Country of Origin: $catBreed[country_of_origin]</div>
+            <div class = 'fluffiness'>Fluffiness Rating: $catBreed[fluffiness_rating]</div>
+            <div class = 'photo'><img alt='Cat Photo' src='$catBreed[image]'/></div>
         </div>";
     }
 
