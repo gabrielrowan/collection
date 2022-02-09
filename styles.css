@@ -64,10 +64,18 @@ fieldset h2 {
 }
 
 fieldset label,
-fieldset option {
+fieldset option,
+fieldset input,
+fieldset select {
     font-family: 'Work Sans', sans-serif;
-    padding: 0.5rem;
+    font-size: 1.25rem;
+    display: block;
+}
+
+input[type="submit"]{
+    background-color: #FDB9C8;
     font-size: 1.5rem;
+    border: 0.1rem solid #F79BB4;
 }
 
 @media only screen and (max-width: 745px) {
@@ -75,4 +83,5 @@ fieldset option {
         text-align: left;
     }
 }
+
 

@@ -278,6 +278,7 @@
             </select><br>
             <label for="url">Cat Photo URL:</label><br>
             <input type="url" name="url" id="url"><br>
+            <input type="submit">
         </fieldset>
     </form>
 </main>
