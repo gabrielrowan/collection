@@ -267,7 +267,7 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select><br>
-            <label for="fluffliness">Fluffiness Rating:</label><br>
+            <label for="fluffiness">Fluffiness Rating:</label><br>
             <select id="fluffiness" name="fluffiness"><br>
                 <option value="0">0</option>
                 <option value="1">1</option>

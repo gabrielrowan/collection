@@ -48,6 +48,28 @@ main {
     justify-content: center;
 }
 
+main form {
+    width: 40vw;
+}
+
+fieldset {
+    padding: 3rem;
+    background-color: #FEE6ED;
+    border: hidden;
+}
+
+fieldset h2 {
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+}
+
+fieldset label,
+fieldset option {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 745px) {
     header {
         text-align: left;
