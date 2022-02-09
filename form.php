@@ -12,7 +12,7 @@
 <header>
     <h1>Cats of the World! 	&#127758</h1>
 </header>
-<main>
+<main class="formMain">
     <form>
         <fieldset>
             <h2>Add a cat to our database!</h2>
