@@ -6,10 +6,8 @@
  * @return object
  */
 function get_db(): PDO {
-
     return new PDO('mysql:host=db; dbname=gabriel-collection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
 }
 
 /**
@@ -20,11 +18,9 @@ function get_db(): PDO {
  * @return array - Returns an array of cat data from the database
  */
 function retrieve_db_items(PDO $db): array {
-
     $query = $db->prepare("SELECT `breed_name`, `country_of_origin`, `fluffiness_rating`, `image` FROM `cat_types`;");
     $query->execute();
     return $query->fetchAll();
-
 }
 
 /**
@@ -47,6 +43,5 @@ function printCatBreed(array $catBreeds): string {
             <div class = 'photo'><img alt='Cat Photo' src='$catBreed[image]'/></div>
         </div>";
     }
-
     return $result;
 };
