@@ -21,4 +21,4 @@ if (checkKeys($insertedData)) {
         echo "Success";
     }
 }
-//header('Location: index.php');
+header('Location: index.php');
