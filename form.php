@@ -13,14 +13,14 @@
     <h1>Cats of the World! 	&#127758</h1>
 </header>
 <main class="formMain">
-    <form>
+    <form action="submitLogic.php" method="post">
         <fieldset>
             <h2>Add a cat to our database!</h2>
             <label for="name">Breed name:</label><br>
             <input type="text" id="name" name="name"><br>
             <label for="country">Country of Origin:</label><br>
             <select id="country" name="country"><br>
-                <option value="Afganistan">Afghanistan</option>
+                <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
                 <option value="American Samoa">American Samoa</option>
