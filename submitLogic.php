@@ -14,8 +14,8 @@ if (checkKeys($insertedData)) {
     if (validateCountry($sanitisedCountry)
         && validateFluffiness(intval($sanitisedFluffiness))
         && filter_var($sanitisedURL, FILTER_VALIDATE_URL)
-        && strlen($sanitisedBreedName) > 0
-        && strlen($sanitisedBreedName) < 255) {
+        && validateName($sanitisedBreedName))
+    {
         $db = get_db();
         insertIntoDB($db, $sanitisedBreedName, $sanitisedCountry, $sanitisedFluffiness,  $sanitisedURL);
     }
