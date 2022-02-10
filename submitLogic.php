@@ -1,14 +1,24 @@
 <?php
 
+require 'functions.php';
+
 $insertedData = $_POST;
-
-if (isset($insertedData[breed_name]) && isset($insertedData[country_of_origin]) && isset($insertedData[fluffiness_rating]) &&
-    isset($insertedData[image]) {
-    filter_var($insertedData[breed_name], FILTER_SANITIZE_STRING);
-    filter_var($insertedData[image], FILTER_SANITIZE_URL);
-        if (filter_var())
-
-
-
+var_dump($insertedData);
+if (checkKeys($insertedData)) {
+    //sanitise
+    $sanitisedBreedName = filter_var($insertedData['name'], FILTER_SANITIZE_STRING);
+    $sanitisedCountry = filter_var($insertedData['country'], FILTER_SANITIZE_STRING);
+    $sanitisedFluffiness = filter_var($insertedData['fluffiness'], FILTER_SANITIZE_NUMBER_INT);
+    $sanitisedURL = filter_var($insertedData['url'], FILTER_SANITIZE_URL);
+    //validate
+    if (validateCountry($sanitisedCountry)
+        && validateFluffiness(intval($sanitisedFluffiness))
+        && filter_var($sanitisedURL, FILTER_VALIDATE_URL)
+        && strlen($sanitisedBreedName) > 0
+        && strlen($sanitisedBreedName) < 255) {
+        //insert into DB
+        //Test echo for now
+        echo "Success";
+    }
 }
-)
+//header('Location: index.php');
