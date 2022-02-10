@@ -10,7 +10,7 @@ header {
     text-align: center;
 }
 
-h1 {
+header h1 {
     background-color: #FEE6ED;
     font-size: 5rem;
     padding: 1rem;
@@ -41,11 +41,82 @@ img {
     width: 25rem;
 }
 
-main {
+.printCat {
     display: flex;
     padding: 3rem;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.formMain {
+    display: flex;
+    padding: 3rem 3rem 6rem 3rem;
+    justify-content: center;
+}
+
+
+fieldset {
+    padding: 3rem;
+    background-color: #FEE6ED;
+    border: hidden;
+}
+
+fieldset h2 {
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+}
+
+fieldset label,
+fieldset option,
+fieldset input,
+fieldset select {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    display: block;
+}
+
+input[type="submit"]{
+    background-color: #FDB9C8;
+    font-size: 1.5rem;
+    border: 0.1rem solid #F79BB4;
+}
+
+.addCat {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    font-size: 3.8rem;
+}
+
+.formButton a {
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    color: black;
+}
+
+.formButton {
+    padding: 1rem 2rem;
+    border: 0.1rem solid #F79BB4;
+    background-color: #FEE6ED;
+}
+
+.indexButton a {
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: black;
+}
+
+.indexButton {
+    padding: 1rem 2rem;
+    border: 0.1rem solid #F79BB4;
+    background-color: #FEE6ED;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem;
 }
 
 @media only screen and (max-width: 745px) {
@@ -53,4 +124,5 @@ main {
         text-align: left;
     }
 }
+
 
