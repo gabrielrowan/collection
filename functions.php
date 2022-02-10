@@ -119,3 +119,13 @@ function validateName(string $name): bool {
         return false;
     }
 }
+
+function insertIntoDB (pdo $db, string $name, string $country, int $fluffiness, string $url): void {
+    $query = $db->prepare("INSERT INTO `cat_types` (`breed_name`, `country_of_origin`, `fluffiness_rating`, `image`) 
+    VALUES (:name, :country, :fluffiness, :url);");
+    $query->bindParam(':name', $name);
+    $query->bindParam(':country', $country);
+    $query->bindParam(':fluffiness', $fluffiness);
+    $query->bindParam(':url', $url);
+    $query->execute();
+}

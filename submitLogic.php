@@ -3,7 +3,7 @@
 require 'functions.php';
 
 $insertedData = $_POST;
-var_dump($insertedData);
+
 if (checkKeys($insertedData)) {
     //sanitise
     $sanitisedBreedName = filter_var($insertedData['name'], FILTER_SANITIZE_STRING);
@@ -16,9 +16,8 @@ if (checkKeys($insertedData)) {
         && filter_var($sanitisedURL, FILTER_VALIDATE_URL)
         && strlen($sanitisedBreedName) > 0
         && strlen($sanitisedBreedName) < 255) {
-        //insert into DB
-        //Test echo for now
-        echo "Success";
+        $db = get_db();
+        insertIntoDB($db, $sanitisedBreedName, $sanitisedCountry, $sanitisedFluffiness,  $sanitisedURL);
     }
 }
-//header('Location: index.php');
+header('Location: index.php');
