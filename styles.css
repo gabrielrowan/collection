@@ -10,7 +10,7 @@ header {
     text-align: center;
 }
 
-h1 {
+header h1 {
     background-color: #FEE6ED;
     font-size: 5rem;
     padding: 1rem;
@@ -118,8 +118,6 @@ footer {
     justify-content: center;
     padding: 0 2rem 2rem;
 }
-
-
 
 @media only screen and (max-width: 745px) {
     header {
