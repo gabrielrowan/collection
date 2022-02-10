@@ -120,6 +120,17 @@ function validateName(string $name): bool {
     }
 }
 
+/**
+ * Inserts user input for cat name, country of origin, fluffiness rating and image url into the database
+ *
+ * @param pdo $db
+ * @param string $name
+ * @param string $country
+ * @param int $fluffiness
+ * @param string $url
+ *
+ * @return void
+ */
 function insertIntoDB (pdo $db, string $name, string $country, int $fluffiness, string $url): void {
     $query = $db->prepare("INSERT INTO `cat_types` (`breed_name`, `country_of_origin`, `fluffiness_rating`, `image`) 
     VALUES (:name, :country, :fluffiness, :url);");
