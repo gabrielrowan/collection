@@ -41,10 +41,10 @@ function printCatBreed(array $catBreeds): string {
             <div class = 'countryOfOrigin'>Country of Origin: $catBreed[country_of_origin]</div>
             <div class = 'fluffiness'>Fluffiness Rating: $catBreed[fluffiness_rating]</div>
             <div class = 'photo'><img alt='Cat Photo' src='$catBreed[image]'/></div>
-            <div class='deleteButton' 
-            <form method='post' action='delete.php'>
-            <input type='hidden' name='id' value=' $catBreed[id] ' />
-            <button type='submit'>Delete</button>
+            <div class='deleteButton'>
+            <form action='delete.php' method='post'>
+            <input type='hidden' name='id' value='$catBreed[id]' />
+            <button type='submit'>Delete Cat</button>
             </form></div>
         </div>";
     }
@@ -147,6 +147,14 @@ function insertIntoDB (pdo $db, string $name, string $country, int $fluffiness, 
 }
 
 
+/**
+ * Changes hidden flag to 1 for given cat entry, removing cat from front end view on webpage
+ *
+ * @param PDO $db
+ * @param int $id
+ *
+ * @return bool
+ */
 function deleteCat(PDO $db, int $id): bool {
     $query = $db->prepare("UPDATE `cat_types` SET `hidden` = 1 WHERE `id` = :id;");
     $query->bindParam(':id', $id);
