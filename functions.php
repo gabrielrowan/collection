@@ -18,7 +18,7 @@ function get_db(): PDO {
  * @return array - Returns an array of cat data from the database
  */
 function retrieve_db_items(PDO $db): array {
-    $query = $db->prepare("SELECT `breed_name`, `country_of_origin`, `fluffiness_rating`, `image` FROM `cat_types`;");
+    $query = $db->prepare("SELECT `id`, `breed_name`, `country_of_origin`, `fluffiness_rating`, `image` FROM `cat_types` WHERE `hidden` = 0;");
     $query->execute();
     return $query->fetchAll();
 }
@@ -41,6 +41,11 @@ function printCatBreed(array $catBreeds): string {
             <div class = 'countryOfOrigin'>Country of Origin: $catBreed[country_of_origin]</div>
             <div class = 'fluffiness'>Fluffiness Rating: $catBreed[fluffiness_rating]</div>
             <div class = 'photo'><img alt='Cat Photo' src='$catBreed[image]'/></div>
+            <div class='deleteButton'>
+            <form action='delete.php' method='post'>
+            <input type='hidden' name='id' value='$catBreed[id]' />
+            <button type='submit'>Delete Cat</button>
+            </form></div>
         </div>";
     }
     return $result;
@@ -139,4 +144,19 @@ function insertIntoDB (pdo $db, string $name, string $country, int $fluffiness, 
     $query->bindParam(':fluffiness', $fluffiness);
     $query->bindParam(':url', $url);
     $query->execute();
+}
+
+
+/**
+ * Changes hidden flag to 1 for given cat entry, removing cat from front end view on webpage
+ *
+ * @param PDO $db
+ * @param int $id
+ *
+ * @return bool
+ */
+function deleteCat(PDO $db, int $id): bool {
+    $query = $db->prepare("UPDATE `cat_types` SET `hidden` = 1 WHERE `id` = :id;");
+    $query->bindParam(':id', $id);
+    return $query->execute();
 }

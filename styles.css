@@ -75,10 +75,17 @@ fieldset select {
     display: block;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     background-color: #FDB9C8;
     font-size: 1.5rem;
     border: 0.1rem solid #F79BB4;
+}
+
+button[type="submit"] {
+    background-color: #FDB9C8;
+    font-size: 1.25rem;
+    border: 0.1rem solid #F79BB4;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .addCat {
